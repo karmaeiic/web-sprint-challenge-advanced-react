@@ -8,16 +8,16 @@ export default class PlantList extends Component {
   };
 
   componentDidMount() {
-    fetch(`http://localhost:3333/plants`)
-    .then((res) => res.json())
-    .then((data) => {
-      this.setState({
-        plants:data.plantsData
-      });
-      console.log(this.state.Plants)
-    })
-    .catch(err) => console.log("error: ", err);
-  };
+   fetch(`http://localhost:3333/plants`)
+   .then((res) => res.json())
+   .then((data) => {
+     this.setState({
+       plants:data.plantsData
+     });
+     console.log(this.state.Plants)
+   })
+   .catch((err) => console.log("error: ", err));
+   };
 
 
 
