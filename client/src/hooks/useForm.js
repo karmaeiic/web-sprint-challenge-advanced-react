@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function useForm (initialValues){
-    const [showSuccessful, setShowSeccessful] = useState(false);
+    const [showSuccessMessage, setShowSeccessMessage] = useState(false);
     const [values, setValues] = useState(initialValues);
 
     const handleChanges = (e) => {
@@ -10,8 +10,8 @@ export default function useForm (initialValues){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setShowSeccessful(true);
+        setShowSeccessMessage(true);
     };
 
-    return [values, handleSubmit, handleChanges, showSuccessful]
+    return [values, handleSubmit, handleChanges, showSuccessMessage]
 };
